@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mobile Computing</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div class="sidebar">
-        <h2>Content</h2>
-        <ul>
-            <li><a href="#mobile-communication">1. Mobile Communication</a></li>
+      <h2>Content</h2>
+      <ul>
+        <li><a href="#mobile-communication">1. Mobile Communication</a></li>
         <li><a href="#network-protocol-vs-architecture">2. Network Protocol vs Architecture</a></li>
         <li><a href="#gsm-mobility-management">3. GSM Mobility Management</a></li>
         <li><a href="#hand-off">4. Hand-off</a></li>
@@ -20,563 +20,1437 @@
         <li><a href="#packet-circuit-switching">8. Packet and Circuit Switching</a></li>
         <li><a href="#gprs">9. GPRS</a></li>
         <li><a href="#mobile-ip">10. Mobile IP</a></li>
-        <li><a href="#tunnelling-encapsulation">11. Tunelling and Encapsulation</a></li>
+        <li><a href="#tunnelling-encapsulation">11. Tunneling and Encapsulation</a></li>
         <li><a href="#ipv4-ipv6">12. IPv4 vs IPv6</a></li>
         <li><a href="#wml">13. WML</a></li>
-        </ul>
+        <li><a href="#bluetooth-advantages-limitations">19. Bluetooth Advantages and Limitations</a></li>
+        <li><a href="#java-server-side-programming">20. Java Server-side Programming</a></li>
+        <li><a href="#pervasive-web-application-architecture">23. Pervasive Web Application Architecture</a></li>
+        <li><a href="#device-independent-application">24. Device Independent Application</a></li>
+      </ul>
     </div>
     <div class="main-content">
-        <header>
-            <h1>Mobile Computing</h1>
-        </header>
-        <main>
-            <section id="mobile-communication">
-                <h2>1. What is Mobile Communication?</h2>
-                <p>Mobile Communication is the use of technology that allows us to communicate with others in different locations without the use of any physical connection.</p>
-                <h3>Features:</h3>
-                <ul>
-                    <li><b>High capacity load balancing:</b> Each wired or wireless infrastructure must incorporate high capacity load balancing.</li>
-                    <li><b>Network management system:</b> Nowadays, wireless networks are much more complex and may consist of hundreds or even thousands of access points, firewalls, switches, managed power, and various other components.</li>
-                </ul>
-                <h3>Advantages:</h3>
-                <ul>
-                    <li>Flexibility: Wireless communication enables the people to communicate with each other regardless of location.</li>
-                    <li>Cost effectiveness: In wireless communication, there is no need for any physical infrastructure. Hence, the cost is reduced.</li>
-                    <li>Speed: The network connectivity or the accessibility was much improved in accuracy and speed.</li>
-                    <li>Accessibility: With the help of wireless technology, easy accessibility to remote areas is possible.</li>
-                    <li>Constant connectivity: Constant connectivity ensures that people can respond to emergencies relatively quickly.</li>
-                </ul>
-            </section>
+      <header>
+        <h1>Mobile Computing</h1>
+      </header>
+      <main>
+        <section id="mobile-communication">
+          <h2>1. What is Mobile Communication?</h2>
+          <p>
+            Mobile Communication is the use of technology that allows us to
+            communicate with others in different locations without the use of
+            any physical connection.
+          </p>
+          <h3>Features:</h3>
+          <ul>
+            <li>
+              <b>High capacity load balancing:</b> Each wired or wireless
+              infrastructure must incorporate high capacity load balancing.
+            </li>
+            <li>
+              <b>Network management system:</b> Nowadays, wireless networks are
+              much more complex and may consist of hundreds or even thousands of
+              access points, firewalls, switches, managed power, and various
+              other components.
+            </li>
+          </ul>
+          <h3>Advantages:</h3>
+          <ul>
+            <li>
+              Flexibility: Wireless communication enables the people to
+              communicate with each other regardless of location.
+            </li>
+            <li>
+              Cost effectiveness: In wireless communication, there is no need
+              for any physical infrastructure. Hence, the cost is reduced.
+            </li>
+            <li>
+              Speed: The network connectivity or the accessibility was much
+              improved in accuracy and speed.
+            </li>
+            <li>
+              Accessibility: With the help of wireless technology, easy
+              accessibility to remote areas is possible.
+            </li>
+            <li>
+              Constant connectivity: Constant connectivity ensures that people
+              can respond to emergencies relatively quickly.
+            </li>
+          </ul>
+        </section>
 
-            <section id="network-protocol-vs-architecture">
-                <h2>2. What is the difference between network protocol and network architecture?</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Aspects</th>
-                            <th>Network Protocol</th>
-                            <th>Network Architecture</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Definition</td>
-                            <td>Set of rules for communication between network devices</td>
-                            <td>Overall design and structure of the network</td>
-                        </tr>
-                        <tr>
-                            <td>Functions</td>
-                            <td>Ensures reliable and efficient communication</td>
-                            <td>Organizes and interconnects network components</td>
-                        </tr>
-                        <tr>
-                            <td>Components</td>
-                            <td>Rules, syntax, and conventions</td>
-                            <td>Physical hardware, logical layout, design principles</td>
-                        </tr>
-                        <tr>
-                            <td>Examples</td>
-                            <td>TCP/IP, HTTP, FTP, SMTP</td>
-                            <td>LAN, WAN, MAN, PAN</td>
-                        </tr>
-                        <tr>
-                            <td>Implementation</td>
-                            <td>Software or firmware on network devices</td>
-                            <td>High-level design, including both hardware and software</td>
-                        </tr>
-                        <tr>
-                            <td>Layers</td>
-                            <td>Operate at various layers (e.g., application, transport)</td>
-                            <td>Encompasses all layers and their interconnections</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+        <section id="network-protocol-vs-architecture">
+          <h2>
+            2. What is the difference between network protocol and network
+            architecture?
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Aspects</th>
+                <th>Network Protocol</th>
+                <th>Network Architecture</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Definition</td>
+                <td>Set of rules for communication between network devices</td>
+                <td>Overall design and structure of the network</td>
+              </tr>
+              <tr>
+                <td>Functions</td>
+                <td>Ensures reliable and efficient communication</td>
+                <td>Organizes and interconnects network components</td>
+              </tr>
+              <tr>
+                <td>Components</td>
+                <td>Rules, syntax, and conventions</td>
+                <td>Physical hardware, logical layout, design principles</td>
+              </tr>
+              <tr>
+                <td>Examples</td>
+                <td>TCP/IP, HTTP, FTP, SMTP</td>
+                <td>LAN, WAN, MAN, PAN</td>
+              </tr>
+              <tr>
+                <td>Implementation</td>
+                <td>Software or firmware on network devices</td>
+                <td>High-level design, including both hardware and software</td>
+              </tr>
+              <tr>
+                <td>Layers</td>
+                <td>
+                  Operate at various layers (e.g., application, transport)
+                </td>
+                <td>Encompasses all layers and their interconnections</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-            <section id="gsm-mobility-management">
-                <h2>3. Management of Mobility in GSM Network</h2>
-                <p>Mobility is a process that allows transferring the mobile service as the mobile station moves from one cell to another.</p>
-                <p>Mobility management in GSM networks has the purpose of monitoring subscribers and their location to enable them to receive voice calls, SMSs, or data services.</p>
-                <h3>Key Components and Processes:</h3>
-                <ul>
-                    <li><b>Location Management:</b> The process of tracking the current location of mobile devices within the network.</li>
-                    <li><b>Roaming:</b> The ability for a cellular customer to automatically make and receive voice calls, send and receive data, or access other services when travelling outside the geographical coverage area of the home network.</li>
-                    <li><b>Handover Management:</b> The process of transferring an ongoing call or data session from one cell to another as a mobile device moves between cells.</li>
-                </ul>
-                <p>GSM networks use various handover techniques, including:</p>
-                <ul>
-                    <li>Intra-cell handover</li>
-                    <li>Inter-cell handover</li>
-                    <li>Inter-BSC handover</li>
-                    <li>Inter-MSC handover</li>
-                </ul>
-                <h3>Function of HLR (Home Location Register):</h3>
-                <ul>
-                    <li><b>Subscriber Profile Management:</b> The HLR maintains detailed subscriber profiles containing information such as the subscriber's mobile number, authentication information, service subscription details.</li>
-                    <li><b>Call Routing:</b> It provides call routing and roaming facilities by combining with MSC and VLR.</li>
-                    <li><b>Authentication:</b> The HLR stores authentication information used to verify the identity of subscribers when they attempt to access network services or make calls.</li>
-                    <li><b>Subscriber Information Storage:</b> The HLR stores permanent data about subscribers, including their service profiles.</li>
-                </ul>
-                <h3>Function of VLR (Visitor Location Register):</h3>
-                <ul>
-                    <li><b>Temporary Subscriber Data Storage:</b> When a mobile device enters a new location area and performs a location update, the VLR stores temporary information about the subscriber.</li>
-                   
-                    <li><b>Call Routing Optimization:</b> The VLR optimizes call routing by storing subscriber information locally, reducing the need to query the HLR for every call or message.</li>
-                    <li><b>Handover Support:</b> During handover procedures, the VLR assists in transferring subscriber information between cells or location areas to ensure uninterrupted service as mobile devices move between coverage areas.</li>
-                    <li><b>Service Management:</b> The VLR handles service provision and restrictions as directed by the HLR and manages supplementary services for the subscriber.</li>
-                </ul>
-            </section>
+        <section id="gsm-mobility-management">
+          <h2>3. Management of Mobility in GSM Network</h2>
+          <p>
+            Mobility is a process that allows transferring the mobile service as
+            the mobile station moves from one cell to another.
+          </p>
+          <p>
+            Mobility management in GSM networks has the purpose of monitoring
+            subscribers and their location to enable them to receive voice
+            calls, SMSs, or data services.
+          </p>
+          <h3>Key Components and Processes:</h3>
+          <ul>
+            <li>
+              <b>Location Management:</b> The process of tracking the current
+              location of mobile devices within the network.
+            </li>
+            <li>
+              <b>Roaming:</b> The ability for a cellular customer to
+              automatically make and receive voice calls, send and receive data,
+              or access other services when travelling outside the geographical
+              coverage area of the home network.
+            </li>
+            <li>
+              <b>Handover Management:</b> The process of transferring an ongoing
+              call or data session from one cell to another as a mobile device
+              moves between cells.
+            </li>
+          </ul>
+          <p>GSM networks use various handover techniques, including:</p>
+          <ul>
+            <li>Intra-cell handover</li>
+            <li>Inter-cell handover</li>
+            <li>Inter-BSC handover</li>
+            <li>Inter-MSC handover</li>
+          </ul>
+          <h3>Function of HLR (Home Location Register):</h3>
+          <ul>
+            <li>
+              <b>Subscriber Profile Management:</b> The HLR maintains detailed
+              subscriber profiles containing information such as the
+              subscriber's mobile number, authentication information, service
+              subscription details.
+            </li>
+            <li>
+              <b>Call Routing:</b> It provides call routing and roaming
+              facilities by combining with MSC and VLR.
+            </li>
+            <li>
+              <b>Authentication:</b> The HLR stores authentication information
+              used to verify the identity of subscribers when they attempt to
+              access network services or make calls.
+            </li>
+            <li>
+              <b>Subscriber Information Storage:</b> The HLR stores permanent
+              data about subscribers, including their service profiles.
+            </li>
+          </ul>
+          <h3>Function of VLR (Visitor Location Register):</h3>
+          <ul>
+            <li>
+              <b>Temporary Subscriber Data Storage:</b> When a mobile device
+              enters a new location area and performs a location update, the VLR
+              stores temporary information about the subscriber.
+            </li>
 
-            <section id="hand-off">
-                <h2>4. What is Hand-off? Differentiate between Soft Hand-off and Hard Hand-off</h2>
-                <p>Hand-off (or Handover) is a process in mobile communication systems where an ongoing call or data session is transferred from one cell to another without disconnecting the session.</p>
-                <ul>
-                    <li>This ensures seamless communication as a mobile user moves through different coverage areas.</li>
-                    <li>The primary goal of a hand-off is to maintain uninterrupted service.</li>
-                </ul>
-                <h3>Types of Handoffs:</h3>
-                <ul>
-                    <li><b>Hard Handoff:</b> In this strategy, the connection to the current cell is broken before a new connection is established with the target cell.</li>
-                    <li><b>Soft Handoff:</b> Soft Handoff is a mechanism in which the device gets connected with two or more base stations at the same time.</li>
-                    <li><b>Delayed Handoff:</b> Delayed handoff occurs when no base station is available for accepting the transfer. The call continues until the signal strength reaches a threshold, and after that, the call is dropped.</li>
-                    <li><b>Mobile-Assisted Handoff:</b> Mobile-Assisted handoff is generally used when a mobile phone helps a base station to transfer the call to another base station with better-improvised connectivity and more signal strength.</li>
-                </ul>
-                <h3>Differentiate between Soft Hand-off and Hard Hand-off:</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Hard Hand-off</th>
-                            <th>Soft Hand-off</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>The mobile device disconnects from the current base station before establishing a connection with the target base station.</td>
-                            <td>The mobile device maintains connections with multiple base stations simultaneously before transitioning to the target cell.</td>
-                        </tr>
-                        <tr>
-                            <td>May result in a brief drop in signal quality or an interruption in the call during the transition period.</td>
-                            <td>This method provides better signal quality and reliability since the device can combine signals from multiple cells.</td>
-                        </tr>
-                        <tr>
-                            <td>It allocates different frequency.</td>
-                            <td>It allocates the same frequency.</td>
-                        </tr>
-                        <tr>
-                            <td>Hard hand-off typically used in TDMA and FDMA.</td>
-                            <td>Soft hand-off used in CDMA and some TDMA systems.</td>
-                        </tr>
-                        <tr>
-                            <td>Hard hand-off is not very complicated.</td>
-                            <td>More complex than hard hand-off.</td>
-                        </tr>
-                        <tr>
-                            <td>In hard hand-off handset always communicated with one BS at a time.</td>
-                            <td>Communicate up to three or four radio links at the same time.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+            <li>
+              <b>Call Routing Optimization:</b> The VLR optimizes call routing
+              by storing subscriber information locally, reducing the need to
+              query the HLR for every call or message.
+            </li>
+            <li>
+              <b>Handover Support:</b> During handover procedures, the VLR
+              assists in transferring subscriber information between cells or
+              location areas to ensure uninterrupted service as mobile devices
+              move between coverage areas.
+            </li>
+            <li>
+              <b>Service Management:</b> The VLR handles service provision and
+              restrictions as directed by the HLR and manages supplementary
+              services for the subscriber.
+            </li>
+          </ul>
+        </section>
 
-            <section id="mobile-internet-limitations">
-                <h2>5. Write down the limitations of accessing the mobile internet?</h2>
-                <p>Accessing the mobile internet comes with several limitations. These limitations can affect the user experience and the efficiency of mobile internet usage.</p>
-                <ul>
-                    <li><b>Network Coverage and Availability:</b> One of the primary limitations of accessing the mobile internet is the availability and reliability of network coverage. In remote or rural areas, network coverage may be limited or non-existent.</li>
-                    <li><b>Data Speed and Bandwidth:</b> Mobile internet speeds can be significantly slower compared to fixed broadband connections. Limited bandwidth may result in slower loading times for web pages, buffering during streaming.</li>
-                    <li><b>Data Caps and Usage Limits:</b> Many mobile internet plans come with data caps or usage limits.</li>
-                    <li><b>Device Compatibility and Screen Size:</b> Not all websites and online services are optimized for mobile devices, leading to compatibility issues and usability challenges.</li>
-                    <li><b>Battery Life and Power Consumption:</b> Accessing the mobile internet can drain the battery of mobile devices quickly, especially when using data-intensive applications or services.</li>
-                    <li><b>Security and Privacy Risks:</b> Mobile internet use can expose users to security and privacy risks, such as:</li>
-                    <ul>
-                        <li>Public Wi-Fi networks can be less secure, making it easier for hackers to intercept data.</li>
-                        <li>Mobile devices can be more vulnerable to malware and phishing attacks.</li>
-                    </ul>
-                </ul>
-            </section>
+        <section id="hand-off">
+          <h2>
+            4. What is Hand-off? Differentiate between Soft Hand-off and Hard
+            Hand-off
+          </h2>
+          <p>
+            Hand-off (or Handover) is a process in mobile communication systems
+            where an ongoing call or data session is transferred from one cell
+            to another without disconnecting the session.
+          </p>
+          <ul>
+            <li>
+              This ensures seamless communication as a mobile user moves through
+              different coverage areas.
+            </li>
+            <li>
+              The primary goal of a hand-off is to maintain uninterrupted
+              service.
+            </li>
+          </ul>
+          <h3>Types of Handoffs:</h3>
+          <ul>
+            <li>
+              <b>Hard Handoff:</b> In this strategy, the connection to the
+              current cell is broken before a new connection is established with
+              the target cell.
+            </li>
+            <li>
+              <b>Soft Handoff:</b> Soft Handoff is a mechanism in which the
+              device gets connected with two or more base stations at the same
+              time.
+            </li>
+            <li>
+              <b>Delayed Handoff:</b> Delayed handoff occurs when no base
+              station is available for accepting the transfer. The call
+              continues until the signal strength reaches a threshold, and after
+              that, the call is dropped.
+            </li>
+            <li>
+              <b>Mobile-Assisted Handoff:</b> Mobile-Assisted handoff is
+              generally used when a mobile phone helps a base station to
+              transfer the call to another base station with better-improvised
+              connectivity and more signal strength.
+            </li>
+          </ul>
+          <h3>Differentiate between Soft Hand-off and Hard Hand-off:</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Hard Hand-off</th>
+                <th>Soft Hand-off</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  The mobile device disconnects from the current base station
+                  before establishing a connection with the target base station.
+                </td>
+                <td>
+                  The mobile device maintains connections with multiple base
+                  stations simultaneously before transitioning to the target
+                  cell.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  May result in a brief drop in signal quality or an
+                  interruption in the call during the transition period.
+                </td>
+                <td>
+                  This method provides better signal quality and reliability
+                  since the device can combine signals from multiple cells.
+                </td>
+              </tr>
+              <tr>
+                <td>It allocates different frequency.</td>
+                <td>It allocates the same frequency.</td>
+              </tr>
+              <tr>
+                <td>Hard hand-off typically used in TDMA and FDMA.</td>
+                <td>Soft hand-off used in CDMA and some TDMA systems.</td>
+              </tr>
+              <tr>
+                <td>Hard hand-off is not very complicated.</td>
+                <td>More complex than hard hand-off.</td>
+              </tr>
+              <tr>
+                <td>
+                  In hard hand-off handset always communicated with one BS at a
+                  time.
+                </td>
+                <td>
+                  Communicate up to three or four radio links at the same time.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-            <section id="multiple-access-techniques">
-                <h2>6. What is Multiple Access Technique? Do a Comparative Study among FDMA, TDMA & CDMA?</h2>
-                <p>Multiple Access Technique refers to a method that allows multiple users to share the same frequency communication channel effectively without interference.</p>
-                <ul>
-                    <li>The multiplexing is provided in the physical layer, and the shared communication medium can be wired cables or wireless spectrum.</li>
-                </ul>
-                <h3>Types of Multiple Access Techniques:</h3>
-                <h4>1. Frequency Division Multiple Access (FDMA):</h4>
-                <p>The available frequency band is divided into multiple frequency channels, each assigned to a different user or communication link.</p>
-                <ul>
-                    <li><b>Usage:</b> Commonly used in analog systems and early cellular networks.</li>
-                    <li><b>Advantages:</b> Simple implementation, minimal timing requirements.</li>
-                    <li><b>Disadvantages:</b> Inefficient use of bandwidth, fixed allocation of frequencies can lead to underutilization.</li>
-                </ul>
-                <h4>2. Time Division Multiple Access (TDMA):</h4>
-                <p>The available frequency is divided into time slots, and each user is assigned a specific time slot during which they can transmit or receive data.</p>
-                <ul>
-                    <li><b>Usage:</b> Used in digital systems such as GSM.</li>
-                    <li><b>Advantages:</b> Dynamic allocation of time slots.</li>
-                    <li><b>Disadvantages:</b> Requires potential delay due to time slot allocation.</li>
-                </ul>
-                <h4>3. Code Division Multiple Access (CDMA):</h4>
-                <p>Each user is assigned a unique code, and all users can transmit simultaneously over the same frequency band.</p>
-                <ul>
-                    <li><b>Usage:</b> Used in 3G networks and technologies.</li>
-                    <li><b>Advantages:</b> High capacity, better resistance to interference.</li>
-                    <li><b>Disadvantages:</b> Complex implementation, requires sophisticated signal processing.</li>
-                </ul>
-                <h3>Comparative Study among FDMA, TDMA & CDMA:</h3>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Parameters</th>
-                            <th>FDMA</th>
-                            <th>TDMA</th>
-                            <th>CDMA</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Codeword</td>
-                            <td>The FDMA doesn’t need a codeword.</td>
-                            <td>The TDMA also needs no codeword.</td>
-                            <td>The codeword is a prerequisite in CDMA.</td>
-                        </tr>
-                        <tr>
-                            <td>Synchronization</td>
-                            <td>FDMA does not require any synchronization.</td>
-                            <td>TDMA requires synchronization.</td>
-                            <td>CDMA also requires no synchronization.</td>
-                        </tr>
-                        <tr>
-                            <td>Rate of Data</td>
-                            <td>FDMA supports a low rate of data.</td>
-                            <td>TDMA supports a medium rate of data.</td>
-                            <td>CDMA supports a high rate of data.</td>
-                        </tr>
-                        <tr>
-                            <td>Flexibility</td>
-                            <td>FDMA is a little flexible.</td>
-                            <td>Flexibility is moderate in TDMA.</td>
-                            <td>CDMA is highly flexible in nature.</td>
-                        </tr>
-                        <tr>
-                            <td>Scheme of Transmission</td>
-                            <td>It is continuous for FDMA.</td>
-                            <td>It is discontinuous for TDMA.</td>
-                            <td>It is continuous for CDMA.</td>
-                        </tr>
-                        <tr>
-                            <td>Capacity of Cells</td>
-                            <td>FDMA has a very limited cell capacity.</td>
-                            <td>TDMA has a very limited cell capacity.</td>
-                            <td>CDMA does not possess any limit on capacity.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+        <section id="mobile-internet-limitations">
+          <h2>
+            5. Write down the limitations of accessing the mobile internet?
+          </h2>
+          <p>
+            Accessing the mobile internet comes with several limitations. These
+            limitations can affect the user experience and the efficiency of
+            mobile internet usage.
+          </p>
+          <ul>
+            <li>
+              <b>Network Coverage and Availability:</b> One of the primary
+              limitations of accessing the mobile internet is the availability
+              and reliability of network coverage. In remote or rural areas,
+              network coverage may be limited or non-existent.
+            </li>
+            <li>
+              <b>Data Speed and Bandwidth:</b> Mobile internet speeds can be
+              significantly slower compared to fixed broadband connections.
+              Limited bandwidth may result in slower loading times for web
+              pages, buffering during streaming.
+            </li>
+            <li>
+              <b>Data Caps and Usage Limits:</b> Many mobile internet plans come
+              with data caps or usage limits.
+            </li>
+            <li>
+              <b>Device Compatibility and Screen Size:</b> Not all websites and
+              online services are optimized for mobile devices, leading to
+              compatibility issues and usability challenges.
+            </li>
+            <li>
+              <b>Battery Life and Power Consumption:</b> Accessing the mobile
+              internet can drain the battery of mobile devices quickly,
+              especially when using data-intensive applications or services.
+            </li>
+            <li>
+              <b>Security and Privacy Risks:</b> Mobile internet use can expose
+              users to security and privacy risks, such as:
+            </li>
+            <ul>
+              <li>
+                Public Wi-Fi networks can be less secure, making it easier for
+                hackers to intercept data.
+              </li>
+              <li>
+                Mobile devices can be more vulnerable to malware and phishing
+                attacks.
+              </li>
+            </ul>
+          </ul>
+        </section>
 
-            <section id="ad-hoc-networks">
-                <h2>7. Write the difference between Ad hoc Networks and Other Networks. What Advantage do Ad hoc Networks Offer? Explain with Example</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Cellular Network</th>
-                            <th>Ad hoc Network</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Circuit Switching is used.</td>
-                            <td>Packet Switching is used.</td>
-                        </tr>
-                        <tr>
-                            <td>It has single hop type.</td>
-                            <td>It has multiple hops.</td>
-                        </tr>
-                        <tr>
-                            <td>Star topology is used.</td>
-                            <td>Mesh topology is used.</td>
-                        </tr>
-                        <tr>
-                            <td>It takes higher cost and more time for deployment.</td>
-                            <td>It takes lower cost and does not take more time for deployment.</td>
-                        </tr>
-                        <tr>
-                            <td>It requires periodic maintenance so it is costly.</td>
-                            <td>Nodes are self-organizing and hence it is less costly.</td>
-                        </tr>
-                        <tr>
-                            <td>The allocation bandwidth is guaranteed and easy.</td>
-                            <td>The allocation of bandwidth is based on shared channels using complex MAC algorithms.</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <h3>Advantages:</h3>
-                <ul>
-                    <li><b>Flexibility and Mobility:</b> Ad hoc networks are highly flexible and can be quickly deployed without the need for a pre-existing infrastructure, such as routers or access points.</li>
-                    <li><b>Scalability:</b> Ad hoc networks can easily scale to accommodate a varying number of devices and adapt to changes in network topology.</li>
-                    <li><b>Redundancy and Reliability:</b> Ad hoc networks can offer increased redundancy and reliability by allowing multiple communication paths between devices.</li>
-                    <li><b>Low Cost and Easy Deployment:</b> Ad hoc networks require minimal infrastructure and can be deployed cost-effectively in situations where setting up traditional wired networks is impractical.</li>
-                </ul>
-            </section>
+        <section id="multiple-access-techniques">
+          <h2>
+            6. What is Multiple Access Technique? Do a Comparative Study among
+            FDMA, TDMA & CDMA?
+          </h2>
+          <p>
+            Multiple Access Technique refers to a method that allows multiple
+            users to share the same frequency communication channel effectively
+            without interference.
+          </p>
+          <ul>
+            <li>
+              The multiplexing is provided in the physical layer, and the shared
+              communication medium can be wired cables or wireless spectrum.
+            </li>
+          </ul>
+          <h3>Types of Multiple Access Techniques:</h3>
+          <h4>1. Frequency Division Multiple Access (FDMA):</h4>
+          <p>
+            The available frequency band is divided into multiple frequency
+            channels, each assigned to a different user or communication link.
+          </p>
+          <ul>
+            <li>
+              <b>Usage:</b> Commonly used in analog systems and early cellular
+              networks.
+            </li>
+            <li>
+              <b>Advantages:</b> Simple implementation, minimal timing
+              requirements.
+            </li>
+            <li>
+              <b>Disadvantages:</b> Inefficient use of bandwidth, fixed
+              allocation of frequencies can lead to underutilization.
+            </li>
+          </ul>
+          <h4>2. Time Division Multiple Access (TDMA):</h4>
+          <p>
+            The available frequency is divided into time slots, and each user is
+            assigned a specific time slot during which they can transmit or
+            receive data.
+          </p>
+          <ul>
+            <li><b>Usage:</b> Used in digital systems such as GSM.</li>
+            <li><b>Advantages:</b> Dynamic allocation of time slots.</li>
+            <li>
+              <b>Disadvantages:</b> Requires potential delay due to time slot
+              allocation.
+            </li>
+          </ul>
+          <h4>3. Code Division Multiple Access (CDMA):</h4>
+          <p>
+            Each user is assigned a unique code, and all users can transmit
+            simultaneously over the same frequency band.
+          </p>
+          <ul>
+            <li><b>Usage:</b> Used in 3G networks and technologies.</li>
+            <li>
+              <b>Advantages:</b> High capacity, better resistance to
+              interference.
+            </li>
+            <li>
+              <b>Disadvantages:</b> Complex implementation, requires
+              sophisticated signal processing.
+            </li>
+          </ul>
+          <h3>Comparative Study among FDMA, TDMA & CDMA:</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Parameters</th>
+                <th>FDMA</th>
+                <th>TDMA</th>
+                <th>CDMA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Codeword</td>
+                <td>The FDMA doesn’t need a codeword.</td>
+                <td>The TDMA also needs no codeword.</td>
+                <td>The codeword is a prerequisite in CDMA.</td>
+              </tr>
+              <tr>
+                <td>Synchronization</td>
+                <td>FDMA does not require any synchronization.</td>
+                <td>TDMA requires synchronization.</td>
+                <td>CDMA also requires no synchronization.</td>
+              </tr>
+              <tr>
+                <td>Rate of Data</td>
+                <td>FDMA supports a low rate of data.</td>
+                <td>TDMA supports a medium rate of data.</td>
+                <td>CDMA supports a high rate of data.</td>
+              </tr>
+              <tr>
+                <td>Flexibility</td>
+                <td>FDMA is a little flexible.</td>
+                <td>Flexibility is moderate in TDMA.</td>
+                <td>CDMA is highly flexible in nature.</td>
+              </tr>
+              <tr>
+                <td>Scheme of Transmission</td>
+                <td>It is continuous for FDMA.</td>
+                <td>It is discontinuous for TDMA.</td>
+                <td>It is continuous for CDMA.</td>
+              </tr>
+              <tr>
+                <td>Capacity of Cells</td>
+                <td>FDMA has a very limited cell capacity.</td>
+                <td>TDMA has a very limited cell capacity.</td>
+                <td>CDMA does not possess any limit on capacity.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
 
-            <section id="packet-circuit-switching">
-                <h2>8. Define Packet Switching and Circuit Switching</h2>
-                <h3>Packet Switching:</h3>
-                <p>Packet switching is a communication method where data is divided into smaller units called packets and transmitted over the network.</p>
-                <ul>
-                    <li>Each packet contains the source and destination addresses, as well as other information needed for routing.</li>
-                </ul>
-                <h4>Advantages of Packet Switching:</h4>
-                <ul>
-                    <li><b>Efficient use of bandwidth:</b> Packet switching is efficient because bandwidth is shared among multiple users.</li>
-                    <li><b>Flexible:</b> Packet switching is flexible and can handle a wide range of data rates and packet sizes.</li>
-                    <li><b>Scalable:</b> Packet switching is highly scalable and can handle large amounts of traffic on a network.</li>
-                    <li><b>Lower cost:</b> Packet switching is less expensive than circuit switching.</li>
-                </ul>
-                <h4>Disadvantages of Packet Switching:</h4>
-                <ul>
-                    <li><b>Higher latency:</b> Packet switching has higher latency.</li>
-                    <li><b>Costs:</b> Installation costs of packet switching are expensive.</li>
-                    <li><b>Packet loss:</b> Packet switching can result in packet loss due to congestion on the network.</li>
-                </ul>
-                <h4>Examples:</h4>
-                <p>The Internet, where data such as emails, web pages, and files are transmitted using protocols like TCP/IP.</p>
+        <section id="ad-hoc-networks">
+          <h2>
+            7. Write the difference between Ad hoc Networks and Other Networks.
+            What Advantage do Ad hoc Networks Offer? Explain with Example
+          </h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Cellular Network</th>
+                <th>Ad hoc Network</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Circuit Switching is used.</td>
+                <td>Packet Switching is used.</td>
+              </tr>
+              <tr>
+                <td>It has single hop type.</td>
+                <td>It has multiple hops.</td>
+              </tr>
+              <tr>
+                <td>Star topology is used.</td>
+                <td>Mesh topology is used.</td>
+              </tr>
+              <tr>
+                <td>It takes higher cost and more time for deployment.</td>
+                <td>
+                  It takes lower cost and does not take more time for
+                  deployment.
+                </td>
+              </tr>
+              <tr>
+                <td>It requires periodic maintenance so it is costly.</td>
+                <td>Nodes are self-organizing and hence it is less costly.</td>
+              </tr>
+              <tr>
+                <td>The allocation bandwidth is guaranteed and easy.</td>
+                <td>
+                  The allocation of bandwidth is based on shared channels using
+                  complex MAC algorithms.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <h3>Advantages:</h3>
+          <ul>
+            <li>
+              <b>Flexibility and Mobility:</b> Ad hoc networks are highly
+              flexible and can be quickly deployed without the need for a
+              pre-existing infrastructure, such as routers or access points.
+            </li>
+            <li>
+              <b>Scalability:</b> Ad hoc networks can easily scale to
+              accommodate a varying number of devices and adapt to changes in
+              network topology.
+            </li>
+            <li>
+              <b>Redundancy and Reliability:</b> Ad hoc networks can offer
+              increased redundancy and reliability by allowing multiple
+              communication paths between devices.
+            </li>
+            <li>
+              <b>Low Cost and Easy Deployment:</b> Ad hoc networks require
+              minimal infrastructure and can be deployed cost-effectively in
+              situations where setting up traditional wired networks is
+              impractical.
+            </li>
+          </ul>
+        </section>
 
-                <h3>Circuit Switching:</h3>
-                <p>Circuit switching is defined as the method of switching which is used for establishing a dedicated communication path between the sender and the receiver. The link which is established between the sender and the receiver is in the physical form.</p>
-                <ul>
-                    <li>This path remains reserved exclusively for the session until it is terminated.</li>
-                </ul>
-                <h4>Advantages of Circuit Switching:</h4>
-                <ul>
-                    <li><b>Fixed Bandwidth:</b> The bandwidth used is fixed.</li>
-                    <li><b>Fixed Data Transmission Rate:</b> The rate at which the data is transmitted is fixed.</li>
-                    <li><b>No Waiting Time During Switching:</b> While switching, no time is wasted in waiting.</li>
-                </ul>
-                <h4>Disadvantages of Circuit Switching:</h4>
-                <ul>
-                    <li><b>High Bandwidth Requirement:</b> Since dedicated channels are used, the bandwidth required is more.</li>
-                    <li><b>Inefficient Resource Utilization:</b> The utilization of resources is not full.</li>
-                    <li><b>High Cost:</b> Circuit switching is expensive.</li>
-                </ul>
-                <h4>Examples:</h4>
-                <p>Traditional telephone networks and ISDN where a continuous, dedicated connection is required.</p>
-            </section>
+        <section id="packet-circuit-switching">
+          <h2>8. Define Packet Switching and Circuit Switching</h2>
+          <h3>Packet Switching:</h3>
+          <p>
+            Packet switching is a communication method where data is divided
+            into smaller units called packets and transmitted over the network.
+          </p>
+          <ul>
+            <li>
+              Each packet contains the source and destination addresses, as well
+              as other information needed for routing.
+            </li>
+          </ul>
+          <h4>Advantages of Packet Switching:</h4>
+          <ul>
+            <li>
+              <b>Efficient use of bandwidth:</b> Packet switching is efficient
+              because bandwidth is shared among multiple users.
+            </li>
+            <li>
+              <b>Flexible:</b> Packet switching is flexible and can handle a
+              wide range of data rates and packet sizes.
+            </li>
+            <li>
+              <b>Scalable:</b> Packet switching is highly scalable and can
+              handle large amounts of traffic on a network.
+            </li>
+            <li>
+              <b>Lower cost:</b> Packet switching is less expensive than circuit
+              switching.
+            </li>
+          </ul>
+          <h4>Disadvantages of Packet Switching:</h4>
+          <ul>
+            <li><b>Higher latency:</b> Packet switching has higher latency.</li>
+            <li>
+              <b>Costs:</b> Installation costs of packet switching are
+              expensive.
+            </li>
+            <li>
+              <b>Packet loss:</b> Packet switching can result in packet loss due
+              to congestion on the network.
+            </li>
+          </ul>
+          <h4>Examples:</h4>
+          <p>
+            The Internet, where data such as emails, web pages, and files are
+            transmitted using protocols like TCP/IP.
+          </p>
 
-            <section id="gprs">
-                <h2>9. What is GPRS? Define the Protocols of a GPRS System</h2>
-                <p>GPRS stands for General Packet Radio Service. It is the modified version of GSM architecture. GPRS is a packet-oriented mobile data mechanism that can carry data packets as well.</p>
-                <ul>
-                    <li>GPRS is able to transmit voice as well as data packets.</li>
-                    <li>GPRS provides moderate-speed data transfer, allowing users to access services such as email, web browsing, and multimedia messaging.</li>
-                </ul>
-                <h3>GPRS Network Architecture:</h3>
-                <p>GPRS tries to make maximum use of the existing physical structure of GSM. It has introduced a new entity named GPRS support nodes (GSN) whose responsibility is to route and deliver a data packet.</p>
-                <ul>
-                    <li><b>Mobile Station (MS):</b> Requires enhanced mobile stations to support high-speed data packets.</li>
-                    <li><b>Base Station Controller (BSC):</b> In GSM architecture there is one component called BSC. But in GPRS there is one component is added to BSC called PCU. PCU stands for Packet Control Unit. If the signal comes to BSC and that signal contains data, then PCU routes to the SGSN.</li>
-                    <li><b>GPRS Support Nodes:</b> GPRS support nodes are of two types:
-                        <ul>
-                            <li><b>Serving GPRS Support Node (SGSN):</b> It is responsible for packet delivery, mobility management, and LLC (Logical Link Control) management.</li>
-                            <li><b>Gateway GPRS Support Node (GGSN):</b> It is responsible for acting as a mediator between the GPRS backbone and external data networks.</li>
-                        </ul>
-                    </li>
-                    <li><b>Internal Backbone Network:</b> It is an IP-based network that is used to support the working of GPRS and this is responsible to carry new packets between different GSNs.</li>
-                    <li><b>Mobility Support:</b>
-                        <ul>
-                            <li><b>Attachment Procedure:</b> Ensures that a mobile station can attach to the GPRS network.</li>
-                            <li><b>Location and Handoff Management:</b> Manages the location of the mobile station and handles the handoff process when the mobile station moves from one cell to another.</li>
-                        </ul>
-                    </li>
-                    <li><b>Routing Area:</b> This is similar to the location area in GSM. The only difference is routing areas use fewer cells as routing areas are smaller than the location area.</li>
-                </ul>
-            </section>
+          <h3>Circuit Switching:</h3>
+          <p>
+            Circuit switching is defined as the method of switching which is
+            used for establishing a dedicated communication path between the
+            sender and the receiver. The link which is established between the
+            sender and the receiver is in the physical form.
+          </p>
+          <ul>
+            <li>
+              This path remains reserved exclusively for the session until it is
+              terminated.
+            </li>
+          </ul>
+          <h4>Advantages of Circuit Switching:</h4>
+          <ul>
+            <li><b>Fixed Bandwidth:</b> The bandwidth used is fixed.</li>
+            <li>
+              <b>Fixed Data Transmission Rate:</b> The rate at which the data is
+              transmitted is fixed.
+            </li>
+            <li>
+              <b>No Waiting Time During Switching:</b> While switching, no time
+              is wasted in waiting.
+            </li>
+          </ul>
+          <h4>Disadvantages of Circuit Switching:</h4>
+          <ul>
+            <li>
+              <b>High Bandwidth Requirement:</b> Since dedicated channels are
+              used, the bandwidth required is more.
+            </li>
+            <li>
+              <b>Inefficient Resource Utilization:</b> The utilization of
+              resources is not full.
+            </li>
+            <li><b>High Cost:</b> Circuit switching is expensive.</li>
+          </ul>
+          <h4>Examples:</h4>
+          <p>
+            Traditional telephone networks and ISDN where a continuous,
+            dedicated connection is required.
+          </p>
+        </section>
 
-            <section id="mobile-ip">
-                <h2>10. Write a short note on a) Mobile IP b) IEEE 802.11 standard c) WLANs</h2>
-                
-                <h3>a) Mobile IP</h3>
-                <p>Mobile IP is a communication protocol that allows the users to move from one network to another with the same IP address. It ensures that the communication will continue without the user’s sessions or connections being dropped.</p>
-                <ul>
-                    <li><b>Mobile Node (MN):</b> The hand-held communication device that the user carries, e.g., Cell phone.</li>
-                    <li><b>Home Agent (HA):</b> A router in the home network to which the mobile node was originally connected.</li>
-                    <li><b>Home Address:</b> The permanent IP address assigned to the mobile node (within its home network).</li>
-                    <li><b>Foreign Agent (FA):</b> A router in a foreign network to which the mobile node is currently connected.</li>
-                </ul>
-                <h4>Advantages of Mobile IP:</h4>
-                <ul>
-                    <li><b>Seamless Connectivity:</b> Allows mobile devices to maintain ongoing sessions while moving across different networks.</li>
-                    <li><b>Transparency:</b> The communication with the correspondent node is transparent, meaning the correspondent node does not need to know the mobile node's current location.</li>
-                    <li><b>Scalability:</b> Can support a large number of mobile nodes and a variety of applications.</li>
-                </ul>
-                <h4>Challenges:</h4>
-                <ul>
-                    <li><b>Security:</b> Ensuring secure registration and data transmission is complex and critical.</li>
-                </ul>
-            
-                <h3>b) IEEE 802.11 Standard</h3>
-                <p>IEEE 802.11 standard defines the protocols for implementing wireless networking, ensuring interoperability between various wireless devices.</p>
-                <ul>
-                    <li><b>Stations (STA):</b> All devices and equipment that are connected to the wireless LAN.</li>
-                    <li>Each station has a wireless network interface controller.</li>
-                    <li><b>Basic Service Set (BSS):</b> A group of stations communicating at the physical layer level.</li>
-                </ul>
-                <h4>Advantages:</h4>
-                <ul>
-                    <li><b>Flexible Architecture:</b> Supports both temporary smaller networks and larger, more permanent ones.</li>
-                    <li><b>Prolonged Battery Life:</b> Efficient power-saving protocols extend mobile device battery life without compromising network connections.</li>
-                </ul>
-                <h4>Disadvantages:</h4>
-                <ul>
-                    <li><b>Noisy Channels:</b> Due to reliance on radio waves, signals may experience interference from nearby devices.</li>
-                    <li><b>Speed:</b> Generally, WLANs offer slower speeds compared to wired LANs.</li>
-                </ul>
-                <h4>Applications:</h4>
-                <ul>
-                    <li><b>Home Networking:</b> Wireless access for computers, smartphones, and smart home devices.</li>
-                    <li><b>Enterprise Networking:</b> Provides connectivity in office environments, supporting a wide range of devices and applications.</li>
-                    <li><b>Public Wi-Fi:</b> Offered in public places such as cafes, airports, and hotels to provide internet access to customers.</li>
-                </ul>
-                <h4>Challenges:</h4>
-                <ul>
-                    <li><b>Security:</b> Wireless networks are more susceptible to security threats.</li>
-                    <li><b>Range and Coverage:</b> The effective range of wireless networks is limited, and signal strength can degrade over distance and obstacles.</li>
-                </ul>
-            
-                <h3>c) WLANs</h3>
-                <p>WLANs are networks that enable devices to connect and communicate wirelessly within a limited area, such as a home, office, or campus. WLANs utilize radio frequency (RF) technology to transmit data, providing mobility and flexibility to users.</p>
-                <ul>
-                    <li><b>Access Points (APs):</b> Hubs that broadcast wireless signals and manage traffic, allowing wireless devices to connect to a wired network.</li>
-                    <li><b>Wireless Clients:</b> Devices like laptops, smartphones, tablets, and IoT gadgets that connect to the network via APs.</li>
-                </ul>
-                <h4>Advantages:</h4>
-                <ul>
-                    <li><b>Mobility:</b> Users can move freely within the coverage area without losing network connectivity, making WLANs ideal for dynamic and mobile environments.</li>
-                    <li><b>Ease of Installation:</b> Wireless networks eliminate the need for extensive cabling, simplifying installation and reducing costs.</li>
-                    <li><b>Scalability:</b> WLANs can be easily expanded by adding more APs, accommodating growing numbers of devices and users.</li>
-                </ul>
-                <h4>Applications:</h4>
-                <ul>
-                    <li><b>Home Networking:</b> Provides wireless internet access for various household devices, including computers, smartphones, smart TVs, and IoT devices.</li>
-                    <li><b>Enterprise Networking:</b> Supports a wide range of business applications, allowing employees to connect laptops, tablets, and other devices to the corporate network.</li>
-                    <li><b>Educational Institutions:</b> Enables students and staff to access online resources, collaborate, and communicate wirelessly across campus.</li>
-                    <li><b>Public Wi-Fi:</b> Offers internet access in public spaces such as cafes, airports, hotels, and libraries.</li>
-                </ul>
-                <h4>Disadvantages:</h4>
-                <ul>
-                    <li><b>WLAN requires license.</b></li>
-                    <li><b>Limited Area:</b> Coverage is typically restricted to a specific area.</li>
-                    <li><b>Interference:</b> Communication may be disrupted by environmental factors such as rain or thunder.</li>
-                    <li><b>Security:</b> Wireless networks are more vulnerable to attacks, making transmitted data susceptible to interception.</li>
-                </ul>
-            </section>
-            
-            <section id="tunnelling-encapsulation">
-                <h2>11. What do you mean by tunnelling and encapsulation in the context of Mobile IP?</h2>
-                <h3>Tunnelling:</h3>
-                <p>Tunneling establishes a virtual path (tunnel) for data packets between two points (entry and endpoint).</p>
-                <ul>
-                    <li><b>Process:</b> Packets enter the tunnel at the entry point, travel through it, and exit unchanged at the endpoint.</li>
-                    <li><b>Purpose:</b> Ensures seamless delivery of packets to the mobile node (MN) as it moves across networks.</li>
-                </ul>
-                <h3>Encapsulation:</h3>
-                <p>The process of wrapping an original packet within a new packet.</p>
-                <ul>
-                    <li><b>Mechanism:</b>
-                        <ul>
-                            <li>The home agent (HA) takes the original packet, inserts it into the data part of a new packet, and adds a new IP header (outer header).</li>
-                            <li>The outer header routes the packet to the mobile node's care-of address (CoA).</li>
-                        </ul>
-                    </li>
-                    <li><b>Decapsulation:</b> The reverse process where the encapsulated packet is extracted from the outer packet.</li>
-                </ul>
-            </section>
-            
-            <section id="ipv4-ipv6">
-                <h2>12. Write the difference between IPV4 & IPV6.</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>IPV4</th>
-                            <th>IPV6</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>The Address Space is 32 bits.</td>
-                            <td>The space is 128 bits.</td>
-                        </tr>
-                        <tr>
-                            <td>Numeric.</td>
-                            <td>Alphanumeric.</td>
-                        </tr>
-                        <tr>
-                            <td>The length of the header is 20 bytes.</td>
-                            <td>The length of the header is 40 bytes.</td>
-                        </tr>
-                        <tr>
-                            <td>4 bytes for each address in the header.</td>
-                            <td>16 bytes for each address in the header.</td>
-                        </tr>
-                        <tr>
-                            <td>Has Checksum fields.</td>
-                            <td>Doesn’t have checksum fields.</td>
-                        </tr>
-                        <tr>
-                            <td>Bits are divided by a period.</td>
-                            <td>Bits are divided by a colon.</td>
-                        </tr>
-                        <tr>
-                            <td>Security is dependent on applications.</td>
-                            <td>Implements an IP security (IPSec) protocol.</td>
-                        </tr>
-                        <tr>
-                            <td>Fragmentation is done both by sending host and routers.</td>
-                            <td>Fragmentation is done by the sending host; there is no role of the routers.</td>
-                        </tr>
-                        <tr>
-                            <td>Networks are configured manually or with DHCP.</td>
-                            <td>Networks are configured automatically.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-            <section id="wml">
-                <h2>13. What are the features of WML?</h2>
-                <p>Wireless Markup Language (WML) is a markup language used for designing web pages that are accessible via mobile devices.</p>
-                <h4>Features of WML:</h4>
-                <ul>
-                    <li><b>Text and Images:</b> WML gives a clue about how the text and images can be presented to the user.</li>
-                    <li><b>User Interaction:</b> WML supports different elements for input like password entry, option selector, and text entry control. The user is free to choose inputs such as keys or voice.</li>
-                    <li><b>Navigation:</b> WML offers hyperlink navigation and browsing history.</li>
-                    <li><b>Context Management:</b> The state can be shared across different decks and can also be saved between different decks.</li>
-                    <li><b>Lightweight:</b> Minimalist design to ensure fast loading and low bandwidth usage.</li>
-                </ul>
-                <h4>Advantages:</h4>
-                <ul>
-                    <li><b>Efficiency:</b> Designed to work over low-bandwidth networks, ensuring quick load times and minimal data usage.</li>
-                    <li><b>Compatibility:</b> Specifically created for mobile devices, ensuring good compatibility with early mobile browsers.</li>
-                    <li><b>Optimized for Mobile:</b> Provides a user-friendly interface on small screens.</li>
-                </ul>
-                <h4>Disadvantages:</h4>
-                <ul>
-                    <li><b>Limited Functionality:</b> Less powerful and flexible compared to HTML and modern web technologies.</li>
-                    <li><b>Decline in Usage:</b> Largely replaced by more advanced technologies like HTML5 as mobile device capabilities have improved.</li>
-                </ul>
-                <h4>Applications:</h4>
-                <ul>
-                    <li><b>Early Mobile Web Browsing:</b> Used to create websites and applications for early mobile phones with WAP browsers.</li>
-                </ul>
-            </section>
-            
+        <section id="gprs">
+          <h2>9. What is GPRS? Define the Protocols of a GPRS System</h2>
+          <p>
+            GPRS stands for General Packet Radio Service. It is the modified
+            version of GSM architecture. GPRS is a packet-oriented mobile data
+            mechanism that can carry data packets as well.
+          </p>
+          <ul>
+            <li>GPRS is able to transmit voice as well as data packets.</li>
+            <li>
+              GPRS provides moderate-speed data transfer, allowing users to
+              access services such as email, web browsing, and multimedia
+              messaging.
+            </li>
+          </ul>
+          <h3>GPRS Network Architecture:</h3>
+          <p>
+            GPRS tries to make maximum use of the existing physical structure of
+            GSM. It has introduced a new entity named GPRS support nodes (GSN)
+            whose responsibility is to route and deliver a data packet.
+          </p>
+          <ul>
+            <li>
+              <b>Mobile Station (MS):</b> Requires enhanced mobile stations to
+              support high-speed data packets.
+            </li>
+            <li>
+              <b>Base Station Controller (BSC):</b> In GSM architecture there is
+              one component called BSC. But in GPRS there is one component is
+              added to BSC called PCU. PCU stands for Packet Control Unit. If
+              the signal comes to BSC and that signal contains data, then PCU
+              routes to the SGSN.
+            </li>
+            <li>
+              <b>GPRS Support Nodes:</b> GPRS support nodes are of two types:
+              <ul>
+                <li>
+                  <b>Serving GPRS Support Node (SGSN):</b> It is responsible for
+                  packet delivery, mobility management, and LLC (Logical Link
+                  Control) management.
+                </li>
+                <li>
+                  <b>Gateway GPRS Support Node (GGSN):</b> It is responsible for
+                  acting as a mediator between the GPRS backbone and external
+                  data networks.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Internal Backbone Network:</b> It is an IP-based network that
+              is used to support the working of GPRS and this is responsible to
+              carry new packets between different GSNs.
+            </li>
+            <li>
+              <b>Mobility Support:</b>
+              <ul>
+                <li>
+                  <b>Attachment Procedure:</b> Ensures that a mobile station can
+                  attach to the GPRS network.
+                </li>
+                <li>
+                  <b>Location and Handoff Management:</b> Manages the location
+                  of the mobile station and handles the handoff process when the
+                  mobile station moves from one cell to another.
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Routing Area:</b> This is similar to the location area in GSM.
+              The only difference is routing areas use fewer cells as routing
+              areas are smaller than the location area.
+            </li>
+          </ul>
+        </section>
 
+        <section id="mobile-ip">
+          <h2>
+            10. Write a short note on a) Mobile IP b) IEEE 802.11 standard c)
+            WLANs
+          </h2>
 
+          <h3>a) Mobile IP</h3>
+          <p>
+            Mobile IP is a communication protocol that allows the users to move
+            from one network to another with the same IP address. It ensures
+            that the communication will continue without the user’s sessions or
+            connections being dropped.
+          </p>
+          <ul>
+            <li>
+              <b>Mobile Node (MN):</b> The hand-held communication device that
+              the user carries, e.g., Cell phone.
+            </li>
+            <li>
+              <b>Home Agent (HA):</b> A router in the home network to which the
+              mobile node was originally connected.
+            </li>
+            <li>
+              <b>Home Address:</b> The permanent IP address assigned to the
+              mobile node (within its home network).
+            </li>
+            <li>
+              <b>Foreign Agent (FA):</b> A router in a foreign network to which
+              the mobile node is currently connected.
+            </li>
+          </ul>
+          <h4>Advantages of Mobile IP:</h4>
+          <ul>
+            <li>
+              <b>Seamless Connectivity:</b> Allows mobile devices to maintain
+              ongoing sessions while moving across different networks.
+            </li>
+            <li>
+              <b>Transparency:</b> The communication with the correspondent node
+              is transparent, meaning the correspondent node does not need to
+              know the mobile node's current location.
+            </li>
+            <li>
+              <b>Scalability:</b> Can support a large number of mobile nodes and
+              a variety of applications.
+            </li>
+          </ul>
+          <h4>Challenges:</h4>
+          <ul>
+            <li>
+              <b>Security:</b> Ensuring secure registration and data
+              transmission is complex and critical.
+            </li>
+          </ul>
 
-        </main>
-        <footer>
-            <p>© 2024 Mobile Computing __SasTik</p>
-        </footer>
+          <h3>b) IEEE 802.11 Standard</h3>
+          <p>
+            IEEE 802.11 standard defines the protocols for implementing wireless
+            networking, ensuring interoperability between various wireless
+            devices.
+          </p>
+          <ul>
+            <li>
+              <b>Stations (STA):</b> All devices and equipment that are
+              connected to the wireless LAN.
+            </li>
+            <li>Each station has a wireless network interface controller.</li>
+            <li>
+              <b>Basic Service Set (BSS):</b> A group of stations communicating
+              at the physical layer level.
+            </li>
+          </ul>
+          <h4>Advantages:</h4>
+          <ul>
+            <li>
+              <b>Flexible Architecture:</b> Supports both temporary smaller
+              networks and larger, more permanent ones.
+            </li>
+            <li>
+              <b>Prolonged Battery Life:</b> Efficient power-saving protocols
+              extend mobile device battery life without compromising network
+              connections.
+            </li>
+          </ul>
+          <h4>Disadvantages:</h4>
+          <ul>
+            <li>
+              <b>Noisy Channels:</b> Due to reliance on radio waves, signals may
+              experience interference from nearby devices.
+            </li>
+            <li>
+              <b>Speed:</b> Generally, WLANs offer slower speeds compared to
+              wired LANs.
+            </li>
+          </ul>
+          <h4>Applications:</h4>
+          <ul>
+            <li>
+              <b>Home Networking:</b> Wireless access for computers,
+              smartphones, and smart home devices.
+            </li>
+            <li>
+              <b>Enterprise Networking:</b> Provides connectivity in office
+              environments, supporting a wide range of devices and applications.
+            </li>
+            <li>
+              <b>Public Wi-Fi:</b> Offered in public places such as cafes,
+              airports, and hotels to provide internet access to customers.
+            </li>
+          </ul>
+          <h4>Challenges:</h4>
+          <ul>
+            <li>
+              <b>Security:</b> Wireless networks are more susceptible to
+              security threats.
+            </li>
+            <li>
+              <b>Range and Coverage:</b> The effective range of wireless
+              networks is limited, and signal strength can degrade over distance
+              and obstacles.
+            </li>
+          </ul>
+
+          <h3>c) WLANs</h3>
+          <p>
+            WLANs are networks that enable devices to connect and communicate
+            wirelessly within a limited area, such as a home, office, or campus.
+            WLANs utilize radio frequency (RF) technology to transmit data,
+            providing mobility and flexibility to users.
+          </p>
+          <ul>
+            <li>
+              <b>Access Points (APs):</b> Hubs that broadcast wireless signals
+              and manage traffic, allowing wireless devices to connect to a
+              wired network.
+            </li>
+            <li>
+              <b>Wireless Clients:</b> Devices like laptops, smartphones,
+              tablets, and IoT gadgets that connect to the network via APs.
+            </li>
+          </ul>
+          <h4>Advantages:</h4>
+          <ul>
+            <li>
+              <b>Mobility:</b> Users can move freely within the coverage area
+              without losing network connectivity, making WLANs ideal for
+              dynamic and mobile environments.
+            </li>
+            <li>
+              <b>Ease of Installation:</b> Wireless networks eliminate the need
+              for extensive cabling, simplifying installation and reducing
+              costs.
+            </li>
+            <li>
+              <b>Scalability:</b> WLANs can be easily expanded by adding more
+              APs, accommodating growing numbers of devices and users.
+            </li>
+          </ul>
+          <h4>Applications:</h4>
+          <ul>
+            <li>
+              <b>Home Networking:</b> Provides wireless internet access for
+              various household devices, including computers, smartphones, smart
+              TVs, and IoT devices.
+            </li>
+            <li>
+              <b>Enterprise Networking:</b> Supports a wide range of business
+              applications, allowing employees to connect laptops, tablets, and
+              other devices to the corporate network.
+            </li>
+            <li>
+              <b>Educational Institutions:</b> Enables students and staff to
+              access online resources, collaborate, and communicate wirelessly
+              across campus.
+            </li>
+            <li>
+              <b>Public Wi-Fi:</b> Offers internet access in public spaces such
+              as cafes, airports, hotels, and libraries.
+            </li>
+          </ul>
+          <h4>Disadvantages:</h4>
+          <ul>
+            <li><b>WLAN requires license.</b></li>
+            <li>
+              <b>Limited Area:</b> Coverage is typically restricted to a
+              specific area.
+            </li>
+            <li>
+              <b>Interference:</b> Communication may be disrupted by
+              environmental factors such as rain or thunder.
+            </li>
+            <li>
+              <b>Security:</b> Wireless networks are more vulnerable to attacks,
+              making transmitted data susceptible to interception.
+            </li>
+          </ul>
+        </section>
+
+        <section id="tunnelling-encapsulation">
+          <h2>
+            11. What do you mean by tunnelling and encapsulation in the context
+            of Mobile IP?
+          </h2>
+          <h3>Tunnelling:</h3>
+          <p>
+            Tunneling establishes a virtual path (tunnel) for data packets
+            between two points (entry and endpoint).
+          </p>
+          <ul>
+            <li>
+              <b>Process:</b> Packets enter the tunnel at the entry point,
+              travel through it, and exit unchanged at the endpoint.
+            </li>
+            <li>
+              <b>Purpose:</b> Ensures seamless delivery of packets to the mobile
+              node (MN) as it moves across networks.
+            </li>
+          </ul>
+          <h3>Encapsulation:</h3>
+          <p>The process of wrapping an original packet within a new packet.</p>
+          <ul>
+            <li>
+              <b>Mechanism:</b>
+              <ul>
+                <li>
+                  The home agent (HA) takes the original packet, inserts it into
+                  the data part of a new packet, and adds a new IP header (outer
+                  header).
+                </li>
+                <li>
+                  The outer header routes the packet to the mobile node's
+                  care-of address (CoA).
+                </li>
+              </ul>
+            </li>
+            <li>
+              <b>Decapsulation:</b> The reverse process where the encapsulated
+              packet is extracted from the outer packet.
+            </li>
+          </ul>
+        </section>
+
+        <section id="ipv4-ipv6">
+          <h2>12. Write the difference between IPV4 & IPV6.</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>IPV4</th>
+                <th>IPV6</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>The Address Space is 32 bits.</td>
+                <td>The space is 128 bits.</td>
+              </tr>
+              <tr>
+                <td>Numeric.</td>
+                <td>Alphanumeric.</td>
+              </tr>
+              <tr>
+                <td>The length of the header is 20 bytes.</td>
+                <td>The length of the header is 40 bytes.</td>
+              </tr>
+              <tr>
+                <td>4 bytes for each address in the header.</td>
+                <td>16 bytes for each address in the header.</td>
+              </tr>
+              <tr>
+                <td>Has Checksum fields.</td>
+                <td>Doesn’t have checksum fields.</td>
+              </tr>
+              <tr>
+                <td>Bits are divided by a period.</td>
+                <td>Bits are divided by a colon.</td>
+              </tr>
+              <tr>
+                <td>Security is dependent on applications.</td>
+                <td>Implements an IP security (IPSec) protocol.</td>
+              </tr>
+              <tr>
+                <td>Fragmentation is done both by sending host and routers.</td>
+                <td>
+                  Fragmentation is done by the sending host; there is no role of
+                  the routers.
+                </td>
+              </tr>
+              <tr>
+                <td>Networks are configured manually or with DHCP.</td>
+                <td>Networks are configured automatically.</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="wml">
+          <h2>13. What are the features of WML?</h2>
+          <p>
+            Wireless Markup Language (WML) is a markup language used for
+            designing web pages that are accessible via mobile devices.
+          </p>
+          <h4>Features of WML:</h4>
+          <ul>
+            <li>
+              <b>Text and Images:</b> WML gives a clue about how the text and
+              images can be presented to the user.
+            </li>
+            <li>
+              <b>User Interaction:</b> WML supports different elements for input
+              like password entry, option selector, and text entry control. The
+              user is free to choose inputs such as keys or voice.
+            </li>
+            <li>
+              <b>Navigation:</b> WML offers hyperlink navigation and browsing
+              history.
+            </li>
+            <li>
+              <b>Context Management:</b> The state can be shared across
+              different decks and can also be saved between different decks.
+            </li>
+            <li>
+              <b>Lightweight:</b> Minimalist design to ensure fast loading and
+              low bandwidth usage.
+            </li>
+          </ul>
+          <h4>Advantages:</h4>
+          <ul>
+            <li>
+              <b>Efficiency:</b> Designed to work over low-bandwidth networks,
+              ensuring quick load times and minimal data usage.
+            </li>
+            <li>
+              <b>Compatibility:</b> Specifically created for mobile devices,
+              ensuring good compatibility with early mobile browsers.
+            </li>
+            <li>
+              <b>Optimized for Mobile:</b> Provides a user-friendly interface on
+              small screens.
+            </li>
+          </ul>
+          <h4>Disadvantages:</h4>
+          <ul>
+            <li>
+              <b>Limited Functionality:</b> Less powerful and flexible compared
+              to HTML and modern web technologies.
+            </li>
+            <li>
+              <b>Decline in Usage:</b> Largely replaced by more advanced
+              technologies like HTML5 as mobile device capabilities have
+              improved.
+            </li>
+          </ul>
+          <h4>Applications:</h4>
+          <ul>
+            <li>
+              <b>Early Mobile Web Browsing:</b> Used to create websites and
+              applications for early mobile phones with WAP browsers.
+            </li>
+          </ul>
+        </section>
+
+        <section id="wap-gateway">
+          <h2>14. What is WAP Gateway? Write down its functionalities.</h2>
+          <p>
+            A WAP (Wireless Application Protocol) Gateway serves as a crucial
+            intermediary in mobile communication networks.
+          </p>
+          <ul>
+            <li>
+              <b>Protocol Conversion:</b> Translating requests and responses
+              between WAP protocols used by mobile devices and standard internet
+              protocols like HTTP or HTTPS.
+            </li>
+            <li>
+              <b>Content Adaptation:</b> Modifying web content to suit mobile
+              device constraints, such as converting HTML to Wireless Markup
+              Language (WML) or resizing images for smaller screens.
+            </li>
+            <li>
+              <b>Security Enhancement:</b> Providing encryption and
+              authentication features to secure data transmitted between mobile
+              devices and web servers over wireless networks.
+            </li>
+            <li>
+              <b>Compression:</b> Optimizing data transmission by compressing
+              web content before delivery to reduce bandwidth usage and improve
+              loading times.
+            </li>
+            <li>
+              <b>Caching:</b> Storing frequently accessed content to reduce
+              latency and enhance performance for mobile users.
+            </li>
+          </ul>
+          <h4>Disadvantages:</h4>
+          <ul>
+            <li>
+              <b>Performance Limitations:</b> WAP Gateways can reduce the
+              overall performance of mobile internet access due to the
+              additional processing required for protocol conversion.
+            </li>
+            <li>
+              <b>Dependency on Service Providers:</b> Mobile users are reliant
+              on service providers to maintain and operate WAP Gateways.
+            </li>
+          </ul>
+        </section>
+
+        <section id="w-cdma-vs-cdma2000">
+          <h2>15. Discuss the relative merits of W-CDMA and CDMA 2000.</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Characteristics</th>
+                <th>W-CDMA</th>
+                <th>CDMA 2000</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Standardization</td>
+                <td>Standardized by 3GPP</td>
+                <td>Standardized by 3GPP2</td>
+              </tr>
+              <tr>
+                <td>Global Adoption</td>
+                <td>Widely adopted globally, especially in Europe, Japan</td>
+                <td>Primarily used in North America</td>
+              </tr>
+              <tr>
+                <td>Data Rates</td>
+                <td>Offers up to 2 Mbps</td>
+                <td>Provides up to 2.4 Mbps (Rev. 0) and 3.1 Mbps (Rev. A)</td>
+              </tr>
+              <tr>
+                <td>Bandwidth</td>
+                <td>Uses 5 MHz bandwidth</td>
+                <td>Uses 1.25 MHz bandwidth</td>
+              </tr>
+              <tr>
+                <td>Quality of Service (QoS)</td>
+                <td>
+                  Supporting a variety of services like voice, video, and data
+                  effectively
+                </td>
+                <td>
+                  Offers good QoS, particularly beneficial for voice and data
+                </td>
+              </tr>
+              <tr>
+                <td>Compatibility and Flexibility</td>
+                <td>Strong global ecosystem and support</td>
+                <td>
+                  Offers backward compatibility, allowing for a smooth
+                  transition from 2G to 3G networks and offering flexible
+                  capacity
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="3g-telecommunication">
+          <h2>
+            16. Write a short note on a) 3G Mobile Telecommunication b) Quality
+            of Services in 3G
+          </h2>
+          <h3>a) 3G Mobile Telecommunication:</h3>
+          <p>
+            3G (Third Generation) mobile telecommunication is an advanced
+            cellular network technology that offers faster data transmission,
+            enabling users to access the internet, multimedia content, and
+            advanced communication services on their mobile devices.
+          </p>
+          <ul>
+            <li>
+              <b>High-Speed Data Transmission:</b> Offers data transfer rates
+              exceeding 0.2 Mbps, allowing for faster internet browsing,
+              downloading, and streaming.
+            </li>
+            <li>
+              <b>Global Roaming:</b> Provides global roaming services for both
+              voice and data, allowing users to stay connected while traveling
+              internationally.
+            </li>
+            <li>
+              <b>Multimedia Access:</b> Enables advanced multimedia
+              functionalities such as music streaming, video calling, and
+              television services on mobile devices.
+            </li>
+            <li>
+              <b>Enhanced Connectivity:</b> Facilitates seamless connectivity
+              and communication, supporting a wide range of applications and
+              services.
+            </li>
+          </ul>
+          <h3>b) Quality of Services in 3G:</h3>
+          <p>
+            Quality of Service (QoS) in 3G networks is a crucial aspect that
+            directly impacts user experience.
+          </p>
+          <ul>
+            <li>
+              <b>Data Transfer Rate:</b> Ensures high-speed data transmission
+              with minimal latency, allowing for smooth browsing, streaming, and
+              downloading experiences.
+            </li>
+            <li>
+              <b>Reliability:</b> Provides consistent and reliable connectivity,
+              minimizing disruptions and dropped connections during voice calls
+              or data sessions.
+            </li>
+            <li>
+              <b>Voice Clarity:</b> Ensures clear and reliable voice calls, with
+              minimal background noise and interference, enhancing the overall
+              communication experience.
+            </li>
+            <li>
+              <b>Multimedia Performance:</b> Delivers satisfactory performance
+              for multimedia applications, such as video streaming and online
+              gaming, by maintaining adequate bandwidth and minimizing
+              buffering.
+            </li>
+            <li>
+              <b>Security and Privacy:</b> Implements robust security measures
+              to protect user data and privacy, preventing unauthorized access
+              or interception of communications.
+            </li>
+            <li>
+              <b>Resource Allocation:</b> Efficiently manages network resources
+              to prioritize critical services and applications, ensuring optimal
+              performance during peak usage periods.
+            </li>
+            <li>
+              <b>Customer Support:</b> Provides responsive customer support
+              services to address user queries, troubleshoot technical issues,
+              and ensure a positive user experience.
+            </li>
+          </ul>
+        </section>
+
+        <section id="globalstar">
+          <h2>17. Write a short note on GLOBALSTAR</h2>
+          <p>
+            Globalstar is a satellite-based mobile communications company that
+            plays a significant role in mobile computing.
+          </p>
+          <ol>
+            <li>
+              <b>Satellite-Based Connectivity:</b> Globalstar offers mobile
+              computing solutions using satellite networks, providing data and
+              voice services in remote areas.
+            </li>
+            <li>
+              <b>Data Services:</b> Globalstar provides data services for mobile
+              computing applications, enabling activities like email, web
+              browsing, and file transfer in remote areas.
+            </li>
+          </ol>
+          <h4>Benefits:</h4>
+          <ul>
+            <li>
+              <b>Remote Connectivity:</b> Globalstar enables connectivity in
+              remote and facilitates communication where traditional networks
+              are unavailable.
+            </li>
+            <li>
+              <b>Reliability:</b> The company's satellite network offers
+              reliable communication services, ensuring continuity of operations
+              and emergency response capabilities.
+            </li>
+            <li>
+              <b>Flexibility:</b> Globalstar's services are flexible and
+              scalable, catering to diverse user requirements and applications,
+              from basic voice calling to high-speed data transmission.
+            </li>
+          </ul>
+        </section>
+
+        <section id="bluetooth-advantages-limitations">
+          <h2>
+            19. Discuss adv and limitations of Bluetooth as a wireless standard.
+          </h2>
+          <h3>Advantages:</h3>
+          <ul>
+            <li>
+              <b>Wireless Convenience:</b> Eliminates the need for wires and
+              cables.
+            </li>
+            <li>
+              <b>Quick Connections:</b> Fast and easy pairing between devices.
+            </li>
+            <li><b>Availability:</b> Widely available in the market.</li>
+            <li><b>Easy Updates:</b> Can be easily updated.</li>
+            <li>
+              <b>Low Power Consumption:</b> Bluetooth Low Energy (BLE)
+              technology allows devices to maintain connectivity with minimal
+              power consumption.
+            </li>
+          </ul>
+          <h3>Limitations:</h3>
+          <ul>
+            <li>
+              <b>Slower Speed:</b> Slower compared to Wi-Fi and LAN with optic
+              fiber.
+            </li>
+            <li><b>Limited Range:</b> Effective up to 50 meters.</li>
+            <li>
+              <b>Security Issues:</b> Vulnerable to security risks during data
+              transfer.
+            </li>
+            <li>
+              <b>Limited Connections:</b> Can only connect a limited number of
+              devices.
+            </li>
+          </ul>
+        </section>
+
+        <section id="java-server-side-programming">
+          <h2>20. Explain server-side programming in Java.</h2>
+          <p>
+            Server-side programming involves writing code that runs on the
+            server to handle client requests, process data, and generate dynamic
+            responses.
+          </p>
+          <h3>Key Functions:</h3>
+          <ul>
+            <li>
+              <b>Processes User Requests:</b> Handles client interactions and
+              performs necessary actions.
+            </li>
+            <li>
+              <b>Database Interaction:</b> Connects to databases to store,
+              retrieve, and manipulate data.
+            </li>
+            <li>
+              <b>Complex Calculations:</b> Performs business logic and
+              calculations securely on the server.
+            </li>
+            <li>
+              <b>Resource Management:</b> Manages server files, interacts with
+              other servers, and handles system tasks.
+            </li>
+          </ul>
+          <h3>Popular Tools and Frameworks:</h3>
+          <ul>
+            <li>
+              Servlets: Java classes that handle HTTP requests and responses.
+            </li>
+            <li>
+              JSP (Java Server Pages): Embeds Java code within HTML for dynamic
+              content.
+            </li>
+            <li>
+              Spring Framework: Provides tools for building enterprise
+              applications.
+            </li>
+          </ul>
+          <h3>Benefits:</h3>
+          <ul>
+            <li><b>Platform Independence:</b> Write once, run anywhere.</li>
+            <li><b>Scalability:</b> Suitable for large-scale applications.</li>
+            <li><b>Security:</b> Strong built-in security features.</li>
+            <li>
+              <b>Community Support:</b> Large and active support community.
+            </li>
+          </ul>
+        </section>
+
+        <section id="pervasive-web-application-architecture">
+          <h2>23. What is Pervasive web application architecture?</h2>
+          <p>
+            Pervasive web application architecture is a design approach for
+            mobile computing applications that ensures seamless integration with
+            the user's environment and continuous access across various devices
+            and locations.
+          </p>
+          <h3>Key Features:</h3>
+          <ol>
+            <li>Easy Access</li>
+            <li>Context Awareness</li>
+            <li>Scalability</li>
+            <li>Adaptability</li>
+          </ol>
+          <h3>Components of Pervasive Web Application Architecture:</h3>
+          <ul>
+            <li>Client Side: Responsive Web Design</li>
+            <li>Server Side: Web Service</li>
+            <li>Middleware: Context Management</li>
+            <li>Data Management: Distributed Databases</li>
+          </ul>
+        </section>
+
+        <section id="device-independent-application">
+          <h2>24. Explain device independent application with example</h2>
+          <p>
+            A device-independent application is designed to work seamlessly
+            across various devices with different screen sizes, operating
+            systems, and capabilities.
+          </p>
+          <h3>Key Techniques for Device Independence:</h3>
+          <ul>
+            <li>Responsive Design</li>
+            <li>Web Applications</li>
+            <li>Progressive Enhancement</li>
+            <li>Platform Independence</li>
+            <li>Consistent User Experience</li>
+          </ul>
+          <h3>Example: Photo Editing Application</h3>
+          <ul>
+            <li>
+              Web-Based Version: Accessible from any device with a web browser
+            </li>
+            <li>Mobile App: Touch-friendly interface for on-the-go editing</li>
+            <li>
+              Desktop App: Advanced editing tools leveraging desktop processing
+              power
+            </li>
+            <li>
+              Consistent Features: All features available regardless of the
+              device
+            </li>
+          </ul>
+        </section>
+      </main>
+      <footer>
+        <p>© 2024 Mobile Computing __SasTik</p>
+      </footer>
     </div>
-</body>
+  </body>
 </html>
